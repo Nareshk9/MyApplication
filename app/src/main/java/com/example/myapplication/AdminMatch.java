@@ -57,8 +57,8 @@ public class AdminMatch extends AppCompatActivity {
         t2_op_partnership=(EditText)findViewById(R.id.t2_op);
         t1_highestScorer=(EditText)findViewById(R.id.t1highestscore);
         t2_highestScorer=(EditText)findViewById(R.id.t2highestscore);
-        t1_wicketTaken=(EditText)findViewById(R.id.t1highestwickets);
-        t2_wicketTaken=(EditText)findViewById(R.id.t2highestwickets);
+        t1_highestWickets=(EditText)findViewById(R.id.t1highestwickets);
+        t2_highestWickets=(EditText)findViewById(R.id.t2highestwickets);
         t1_totalCatches=(EditText)findViewById(R.id.t1totalcatches);
         t2_totalCatches=(EditText)findViewById(R.id.t2totalcatches);
         t1_result=(EditText)findViewById(R.id.t1_result);

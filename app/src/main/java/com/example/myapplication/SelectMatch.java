@@ -8,14 +8,22 @@ import android.widget.Button;
 
 public class SelectMatch extends AppCompatActivity {
 
-    Button b1;
+    Button b1,b2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_match);
-        b1=(Button)findViewById(R.id.get_match_stats);
+        b1=(Button)findViewById(R.id.addmatchtdata);
+        b2=(Button)findViewById(R.id.get_match_stats);
 
         b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addMatchData(v);
+            }
+        });
+
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getStats(v);
@@ -24,9 +32,15 @@ public class SelectMatch extends AppCompatActivity {
 
     }
 
-    public void getStats(View view) {
+    public void addMatchData(View view) {
         Intent intent =new Intent(this,AdminMatch.class);
         startActivity(intent);
-
     }
+
+
+    public void getStats(View view) {
+        Intent intent=new Intent(this,MatchStats.class);
+        startActivity(intent);
+    }
+
 }

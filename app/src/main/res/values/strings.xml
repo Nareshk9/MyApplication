@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="match_date">Date</string>
+    <string name="match_info">Match Info</string>
     <string name="score">Score</string>
     <string name="toss">Toss</string>
     <string name="wicket_taken">Wicket Taken</string>

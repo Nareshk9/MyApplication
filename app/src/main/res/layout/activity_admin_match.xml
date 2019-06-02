@@ -100,7 +100,7 @@
                     android:id="@+id/t1_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="textPhonetic"
                     android:hint="Score" />
 
                 <TextView
@@ -114,7 +114,7 @@
                     android:id="@+id/t2_score"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="textPhonetic"
                     android:hint="@string/score" />
             </TableRow>
 
@@ -126,7 +126,7 @@
                     android:id="@+id/t1wickets"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="Wickets Taken" />
 
                 <TextView
@@ -140,7 +140,7 @@
                     android:id="@+id/t2wickets"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="Wicket taken" />
             </TableRow>
 
@@ -152,7 +152,7 @@
                     android:id="@+id/t1Total6s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="Total 6s" />
 
                 <TextView
@@ -166,7 +166,7 @@
                     android:id="@+id/t2total6s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/total_6s" />
             </TableRow>
 
@@ -178,7 +178,7 @@
                     android:id="@+id/t1total4s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/total_4s" />
 
                 <TextView
@@ -192,7 +192,7 @@
                     android:id="@+id/t2total4s"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/total_4s" />
             </TableRow>
 
@@ -204,7 +204,8 @@
                     android:id="@+id/t1_extras"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="@string/extras" />
+                    android:hint="@string/extras"
+                    android:inputType="number"/>
 
                 <TextView
                     android:id="@+id/extras"
@@ -217,7 +218,7 @@
                     android:id="@+id/t2_extras"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/extras" />
             </TableRow>
 
@@ -229,7 +230,7 @@
                     android:id="@+id/t1_op"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/op_partnership" />
 
                 <TextView
@@ -243,7 +244,7 @@
                     android:id="@+id/t2_op"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/op_partnership" />
             </TableRow>
 
@@ -255,7 +256,7 @@
                     android:id="@+id/t1highestscore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="phone"
                     android:hint="@string/highest_score" />
 
                 <TextView
@@ -269,7 +270,7 @@
                     android:id="@+id/t2highestscore"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="phone"
                     android:hint="@string/highest_score" />
 
             </TableRow>
@@ -308,7 +309,7 @@
                     android:id="@+id/t1totalcatches"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/total_catches" />
 
                 <TextView
@@ -322,7 +323,7 @@
                     android:id="@+id/t2totalcatches"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:hint="@string/total_catches" />
             </TableRow>
 
