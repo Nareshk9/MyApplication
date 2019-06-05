@@ -1,35 +1,28 @@
 package com.example.myapplication;
 
-import com.google.firebase.database.snapshot.StringNode;
-
-import java.util.Date;
-
 public class MatchDetail {
 
-    public Date t1_date,t2_date;
+    public String team1,team2;
+    public String t1_date,t2_date;
     public String t1_toss,t2_toss;
     public String t1_score,t2_score;
-    public Number t1_wicketTaken,t2_wicketTaken;
-    public Number t1_total6s,t2_total6s;
-    public Number t1_total4s,t2_total4s;
-    public Number t1_extras,t2_extras;
-    public Number t1_op,t2_op;
-    public Number t1_highestScorer,t2_highestScorer;
+    public Integer t1_wicketTaken,t2_wicketTaken;
+    public Integer t1_total6s,t2_total6s;
+    public Integer t1_total4s,t2_total4s;
+    public Integer t1_extras,t2_extras;
+    public Integer t1_op,t2_op;
+    public Integer t1_highestScorer,t2_highestScorer;
     public String t1_highestWickets,t2_highestWickets;
-    public Number t1_totalCatches,t2_totalCatches;
+    public Integer t1_totalCatches,t2_totalCatches;
     public String t1_result,t2_result;
 
     public MatchDetail() {
 
     }
 
-    public MatchDetail(Date t1_date, Date t2_date, String t1_toss, String t2_toss, String t1_score,
-                       String t2_score, Number t1_wicketTaken, Number t2_wicketTaken, Number t1_total6s,
-                       Number t2_total6s, Number t1_total4s, Number t2_total4s, Number t1_extras,
-                       Number t2_extras, Number t1_op, Number t2_op, Number t1_highestScorer, Number t2_highestScorer,
-                       String t1_highestWickets, String t2_highestWickets, Number t1_totalCatches,
-                       Number t2_totalCatches, String t1_result, String t2_result)
-    {
+    public MatchDetail(String team1, String team2, String t1_date, String t2_date, String t1_toss, String t2_toss, String t1_score, String t2_score, Integer t1_wicketTaken, Integer t2_wicketTaken, Integer t1_total6s, Integer t2_total6s, Integer t1_total4s, Integer t2_total4s, Integer t1_extras, Integer t2_extras, Integer t1_op, Integer t2_op, Integer t1_highestScorer, Integer t2_highestScorer, String t1_highestWickets, String t2_highestWickets, Integer t1_totalCatches, Integer t2_totalCatches, String t1_result, String t2_result) {
+        this.team1 = team1;
+        this.team2 = team2;
         this.t1_date = t1_date;
         this.t2_date = t2_date;
         this.t1_toss = t1_toss;

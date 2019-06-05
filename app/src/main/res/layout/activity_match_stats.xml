@@ -9,8 +9,8 @@
 
         <TableLayout
             android:layout_marginTop="100dp"
-            android:layout_marginLeft="80dp"
-            android:layout_width="match_parent"
+            android:layout_marginLeft="60dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent" >
 
 
@@ -19,7 +19,7 @@
                 android:layout_height="match_parent" >
 
                 <TextView
-                    android:id="@+id/teamA"
+                    android:id="@+id/team1"
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
                     android:layout_gravity="center"/>
 
                 <TextView
-                    android:id="@+id/teamB"
+                    android:id="@+id/team2"
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -53,6 +53,7 @@
                 android:layout_column="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text=""
                 android:layout_gravity="center"/>
 
             <TextView
@@ -69,6 +70,7 @@
                 android:layout_column="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text=""
                 android:layout_gravity="center"/>
             </TableRow>
 
@@ -81,6 +83,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -97,6 +100,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
             </TableRow>
 
@@ -109,6 +113,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
 
                 <TextView
@@ -125,6 +130,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
 
             </TableRow>
@@ -138,6 +144,7 @@
                     android:id="@+id/teamA_wicketTaken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
 
                 <TextView
@@ -154,6 +161,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
             </TableRow>
 
@@ -163,6 +171,7 @@
                 android:layout_column="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text=""
                 android:layout_gravity="center" />
 
             <TextView
@@ -179,6 +188,7 @@
                 android:layout_column="3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text=""
                 android:layout_gravity="center" />
             </TableRow>
 
@@ -191,6 +201,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
 
                 <TextView
@@ -207,6 +218,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center" />
             </TableRow>
 
@@ -219,6 +231,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -235,6 +248,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -247,6 +261,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -263,6 +278,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -275,6 +291,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -291,6 +308,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -303,6 +321,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -319,6 +338,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -331,6 +351,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -347,6 +368,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
 
@@ -359,6 +381,7 @@
                     android:layout_column="1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
 
                 <TextView
@@ -375,6 +398,7 @@
                     android:layout_column="3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text=""
                     android:layout_gravity="center"/>
             </TableRow>
         </TableLayout>
