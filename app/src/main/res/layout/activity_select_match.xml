@@ -30,6 +30,16 @@
         android:prompt="@string/team_prompt" />
 
     <Button
+        android:id="@+id/addmatchtdata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="330dp"
+        android:onClick="addMatchData"
+        android:text="Add Match Data" />
+
+    <Button
         android:id="@+id/get_match_stats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
