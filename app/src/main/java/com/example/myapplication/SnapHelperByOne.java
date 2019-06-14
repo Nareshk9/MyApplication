@@ -1,4 +1,4 @@
-package com.example.swipedemo;
+package com.example.myapplication;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSnapHelper;

@@ -13,17 +13,17 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class AdminMatch extends AppCompatActivity {
     TextView team1,team2;
-    EditText t1_date,t2_date;
+    EditText matchNo;
+    EditText t1_opp,t2_opp,t1_date,t2_date;
     EditText t1_toss,t2_toss;
     EditText t1_score,t2_score;
     EditText t1_wicketTaken,t2_wicketTaken;
     EditText t1_total6s,t2_total6s;
     EditText t1_total4s,t2_total4s;
-    EditText t1_extras,t2_extras;
-    EditText t1_op_partnership,t2_op_partnership;
-    EditText t1_highestScorer,t2_highestScorer;
-    EditText t1_highestWickets,t2_highestWickets;
-    EditText t1_totalCatches,t2_totalCatches;
+    EditText t1_extras,t2_extras,t1_ros,t2_ros,t1_mOver,t2_mOver;
+    EditText t1_wideBalls,t2_wideBalls,t1_noBalls,t2_noBalls;
+    EditText t1_c,t2_c,t1_hc,t2_hc;
+    EditText t1_totalCatches,t2_totalCatches,t1_BU,t2_BU;
     EditText t1_result,t2_result;
     Button b1;
 
@@ -36,6 +36,7 @@ public class AdminMatch extends AppCompatActivity {
 
         Bundle extras=getIntent().getExtras();
         b1=(Button) findViewById(R.id.saveToDatabase);
+        matchNo=findViewById(R.id.matchNo);
         team1=findViewById(R.id.team1);
         team2=findViewById(R.id.team2);
         if(extras!=null)
@@ -43,6 +44,8 @@ public class AdminMatch extends AppCompatActivity {
             team1.setText(extras.getString("team1"));
             team2.setText(extras.getString("team2"));
         }
+        t1_opp= findViewById(R.id.t1_against);
+        t2_opp=findViewById(R.id.t2_against);
         t1_date=(EditText)findViewById(R.id.t1_date);
         t2_date=(EditText)findViewById(R.id.t2_date);
         t1_toss=(EditText) findViewById(R.id.t1_toss);
@@ -57,16 +60,24 @@ public class AdminMatch extends AppCompatActivity {
         t2_total4s=(EditText)findViewById(R.id.t2total4s);
         t1_extras=(EditText)findViewById(R.id.t1_extras);
         t2_extras=(EditText)findViewById(R.id.t2_extras);
-        t1_op_partnership=(EditText)findViewById(R.id.t1_op);
-        t2_op_partnership=(EditText)findViewById(R.id.t2_op);
-        t1_highestScorer=(EditText)findViewById(R.id.t1highestscore);
-        t2_highestScorer=(EditText)findViewById(R.id.t2highestscore);
+        t1_ros=findViewById(R.id.t1_rs);
+        t2_ros=findViewById(R.id.t2_rs);
+        t1_mOver=findViewById(R.id.t1_mOver);
+        t2_mOver=findViewById(R.id.t2_mOver);
+        t1_wideBalls=findViewById(R.id.t1_wideBalls);
+        t2_wideBalls=findViewById(R.id.t2_wideBalls);
+        t1_noBalls=findViewById(R.id.t1_noBalls);
+        t2_noBalls=findViewById(R.id.t2_noBalls);
+        t1_hc=findViewById(R.id.t1_hc);
+        t2_hc=findViewById(R.id.t2_hc);
+        t1_c=findViewById(R.id.t1_c);
+        t2_c=findViewById(R.id.t2_c);
         t1_totalCatches=(EditText)findViewById(R.id.t1totalcatches);
         t2_totalCatches=(EditText)findViewById(R.id.t2totalcatches);
+        t1_BU=findViewById(R.id.t1_bU);
+        t2_BU=findViewById(R.id.t2_bu);
         t1_result=(EditText)findViewById(R.id.t1_result);
         t2_result=(EditText)findViewById(R.id.t2_result);
-        t1_highestWickets=findViewById(R.id.t1highestwickets);
-        t2_highestWickets=findViewById(R.id.t2highestwickets);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,9 +88,13 @@ public class AdminMatch extends AppCompatActivity {
         });
     }
 
+
     public void addTODatabase(View view) {
+        String match_no=matchNo.getText().toString();
         String team_1=team1.getText().toString();
         String team_2=team2.getText().toString();
+        String t1opp=t1_opp.getText().toString();
+        String t2opp=t2_opp.getText().toString();
         String dateT1=  t1_date.getText().toString();
         String dateT2=  t2_date.getText().toString();
         String tossT1=t1_toss.getText().toString();
@@ -88,27 +103,37 @@ public class AdminMatch extends AppCompatActivity {
         String scoreT2=t2_score.getText().toString();
         Integer wicketT1= Integer.parseInt(t1_wicketTaken.getText().toString());
         Integer wicketT2=Integer.parseInt( t2_wicketTaken.getText().toString());
+        Integer total4sT1=Integer.parseInt( t1_total4s.getText().toString());
+        Integer total4sT2=Integer.parseInt( t2_total4s.getText().toString());
         Integer total6sT1=Integer.parseInt( t1_total6s.getText().toString());
         Integer total6sT2=Integer.parseInt( t2_total6s.getText().toString());
-        Integer total4sT2=Integer.parseInt( t2_total4s.getText().toString());
-        Integer total4sT1=Integer.parseInt( t1_total4s.getText().toString());
+        Integer t1Mover=Integer.parseInt(t1_mOver.getText().toString());
+        Integer t2Mover=Integer.parseInt(t2_mOver.getText().toString());
+        Integer t1Wide=Integer.parseInt(t1_wideBalls.getText().toString());
+        Integer t2Wide=Integer.parseInt(t2_wideBalls.getText().toString());
+        Integer t1noBall=Integer.parseInt(t1_noBalls.getText().toString());
+        Integer t2noBall=Integer.parseInt(t2_noBalls.getText().toString());
+        Integer t1HC=Integer.parseInt(t1_hc.getText().toString());
+        Integer t2Hc=Integer.parseInt(t2_hc.getText().toString());
+        Integer t1C=Integer.parseInt(t1_c.getText().toString());
+        Integer t2c=Integer.parseInt(t2_c.getText().toString());
+
         Integer extrasT1=Integer.parseInt( t1_extras.getText().toString());
         Integer extrasT2=Integer.parseInt( t2_extras.getText().toString());
-        Integer opT1=Integer.parseInt( t1_op_partnership.getText().toString());
-        Integer opT2=Integer.parseInt( t2_op_partnership.getText().toString());
-        Integer hscorerT1=Integer.parseInt( t1_highestScorer.getText().toString());
-        Integer hscorerT2=Integer.parseInt( t2_highestScorer.getText().toString());
-        String hwickettekenT1=t1_highestWickets.getText().toString();
-        String hwickettakenT2=t2_highestWickets.getText().toString();
         Integer totalcatchesT1=Integer.parseInt( t1_totalCatches.getText().toString());
         Integer totalcatchesT2=Integer.parseInt( t2_totalCatches.getText().toString());
+        Integer t1ROS=Integer.parseInt(t1_ros.getText().toString());
+        Integer t2ROS=Integer.parseInt(t2_ros.getText().toString());
+        Integer t1bUsed=Integer.parseInt(t1_BU.getText().toString());
+        Integer t2bUsed=Integer.parseInt(t2_BU.getText().toString());
         String resultT1=t1_result.getText().toString();
         String resultT2=t2_result.getText().toString();
-        MatchDetail lastmatch=new MatchDetail(team_1,team_2,dateT1,dateT2,tossT1,tossT2,scoreT1,scoreT2,wicketT1,wicketT2,
-                total6sT1,total6sT2,total4sT1,total4sT2,extrasT1,extrasT2,opT1,opT2,hscorerT1,hscorerT2,
-                hwickettekenT1,hwickettakenT2,totalcatchesT1,totalcatchesT2,resultT1,resultT2);
-        Toast.makeText(this,tossT1,Toast.LENGTH_SHORT).show();
-        mRootRef.child("Analytics").child("Cricket").child(team_1+team_2).child("Match1").setValue(lastmatch);
+        MatchDetail lastMatch=new MatchDetail(team_1,team_2,t1opp,t2opp,dateT1,dateT2,tossT1,tossT2,scoreT1,scoreT2,wicketT1,wicketT2,t1ROS,t2ROS,
+                total6sT1,total6sT2,total4sT1,total4sT2,extrasT1,extrasT2,t1Mover,t2Mover,t1Wide,t2Wide,t1noBall,t2noBall,t1C,t2c,t1HC,t2Hc,t1bUsed,
+                t2bUsed,totalcatchesT1,totalcatchesT2,resultT1,resultT2);
+        Toast.makeText(this,"Adding",Toast.LENGTH_SHORT).show();
+        mRootRef.child("Analytics").child("Cricket").child(team_1+team_2).child(match_no).setValue(lastMatch);
         Toast.makeText(this,"Added to Firebase",Toast.LENGTH_SHORT).show();
+
     }
 }

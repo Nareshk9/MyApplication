@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="match_date">Date</string>
-    <string name="match_info">Match Info</string>
+    <string name="team">Team</string>
     <string name="score">Score</string>
     <string name="toss">Toss</string>
     <string name="wicket_taken">Wicket Taken</string>
@@ -13,6 +13,8 @@
     <string name="result">Result</string>
     <string name="total_catches">Total Catches</string>
     <string name="highest_wickets">Highest Wickets</string>
+
+    <string name="match_data">Matches Summary</string>
 
     <string name="team_prompt">Choose Team</string>
 
@@ -28,4 +30,28 @@
         <item>WI</item>
         <item>SA</item>
     </string-array>
+
+    <string-array name="stadium_list">
+        <item>Dehli ,India</item>
+        <item>London, England</item>
+        <item>Kolkata, India</item>
+        <item>Mumbai, India</item>
+
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pitch_info">Pitch Info</string>
+    <string name="venue">Venue</string>
+    <string name="stadium_information">Stadium Information</string>
+    <string name="statistic">STATISTICS</string>
+    <string name="against">Against</string>
+    <string name="wide_balls">Wide Balls</string>
+    <string name="halfCenturies">Half Centuries</string>
+    <string name="run_outs_stumps">Run-Outs/Stumps</string>
+    <string name="no_balls">No Balls</string>
+    <string name="bowler_used">Bowler Used</string>
+    <string name="maiden_overs">Maiden Overs</string>
+    <string name="centuries">Centuries</string>
+    <string name="opponent">Opponent</string>
 </resources>

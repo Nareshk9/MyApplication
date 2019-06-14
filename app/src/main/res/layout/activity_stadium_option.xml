@@ -1,9 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StadiumOption">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/stadiumOption"
+    android:background="@drawable/mainbackground">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/stadium_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/rectangle"
+        android:padding="10dp"
+        android:text="@string/stadium_information"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:fontFamily="@font/aldrich" />
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stadium_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="2dp"
+        android:background="@drawable/button2rectangle" >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:text="@string/venue"
+                android:textColor="@color/colorBlack" />
+
+            <TextView
+                android:id="@+id/pitchinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:text="@string/pitch_info"
+                android:textColor="@color/colorBlack" />
+
+        </TableRow>
+        <TableRow>
+            <EditText
+                android:id="@+id/etvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:hint="venue" />
+
+            <EditText
+                android:id="@+id/etpitchinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_gravity="center"
+                android:layout_margin="3dp"
+                android:maxLines="3"
+                android:hint="pitch info" />
+
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/addStadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="274dp"
+        android:onClick="addStadium"
+        android:text="Add Stadium" />
+
+</RelativeLayout>

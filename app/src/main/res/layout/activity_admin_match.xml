@@ -1,371 +1,517 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AdminMatch"
-    android:orientation="vertical">
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:scrollbars="vertical"
-        android:layout_weight="1">
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+    android:orientation="vertical"
+    android:isScrollContainer="true"
+    android:background="@drawable/mainbackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#66141414">
 
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/team1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Team 1"
-                    android:textColor="@color/colorBlack"/>
-
-                <TextView
-                    android:id="@+id/match_detail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Match Details"
-                    android:textColor="@color/colorBlack" />
-
-                <TextView
-                    android:id="@+id/team2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Team 2"
-                    android:textColor="@color/colorBlack"/>
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:hint="@string/match_date" />
-
-                <TextView
-                    android:id="@+id/matchinfo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Match Info"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2_date"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="date"
-                    android:hint="@string/match_date" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_toss"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="Toss" />
-
-                <TextView
-                    android:id="@+id/toss"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/toss"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2_toss"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="Toss" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPhonetic"
-                    android:hint="Score" />
-
-                <TextView
-                    android:id="@+id/score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/score"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2_score"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPhonetic"
-                    android:hint="@string/score" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1wickets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="Wickets Taken" />
-
-                <TextView
-                    android:id="@+id/wickets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/wicket_taken"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2wickets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="Wicket taken" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1Total6s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="Total 6s" />
-
-                <TextView
-                    android:id="@+id/total6s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total_6s"
-                    android:textColor="#000"/>
-
-                <EditText
-                    android:id="@+id/t2total6s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/total_6s" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1total4s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/total_4s" />
-
-                <TextView
-                    android:id="@+id/total4s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total_4s"
-                    android:textColor="#000"/>
-
-                <EditText
-                    android:id="@+id/t2total4s"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/total_4s" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_extras"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/extras"
-                    android:inputType="number"/>
-
-                <TextView
-                    android:id="@+id/extras"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/extras"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2_extras"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/extras" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_op"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/op_partnership" />
-
-                <TextView
-                    android:id="@+id/op"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/op_partnership"
-                    android:textColor="#000"/>
-
-                <EditText
-                    android:id="@+id/t2_op"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/op_partnership" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1highestscore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:hint="@string/highest_score" />
-
-                <TextView
-                    android:id="@+id/highestscore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/highest_score"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2highestscore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="phone"
-                    android:hint="@string/highest_score" />
-
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1highestwickets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/highest_wickets" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/highest_wickets"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2highestwickets"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/highest_wickets" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1totalcatches"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/total_catches" />
-
-                <TextView
-                    android:id="@+id/totalcatches"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/total_catches"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2totalcatches"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="number"
-                    android:hint="@string/total_catches" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-
-                <EditText
-                    android:id="@+id/t1_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/result" />
-
-                <TextView
-                    android:id="@+id/result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/result"
-                    android:textColor="@color/colorBlack" />
-
-                <EditText
-                    android:id="@+id/t2_result"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:inputType="textPersonName"
-                    android:hint="@string/result" />
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
-
-        <Button
-            android:id="@+id/saveToDatabase"
+        <EditText
+            android:id="@+id/matchNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="135dp"
-            android:layout_marginBottom="48dp"
-            android:text="Save To Database"
-            android:onClick="addTODatabase"/>
+            android:inputType="textPersonName"
+            android:hint="Match Number"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:layout_margin="5dp"/>
 
-</RelativeLayout>
+        <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich" >
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/team1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team 1"
+                        android:fontFamily="@font/aldrich"
+                        android:textColor="@color/colorBlack"/>
+
+                    <TextView
+                        android:id="@+id/match_team"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/team"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:id="@+id/team2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Team 2"
+                        android:textColor="@color/colorBlack"/>
+                </TableRow>
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/t1_against"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/opponent" />
+
+                    <TextView
+                        android:id="@+id/oppositeTeam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/against"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_against"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:hint="@string/opponent" />
+                </TableRow>
+
+
+                <TableRow>
+
+                    <EditText
+                        android:id="@+id/t1_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:hint="@string/match_date" />
+
+                    <TextView
+                        android:id="@+id/matchinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/match_date"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:hint="@string/match_date" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_toss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="Toss" />
+
+                    <TextView
+                        android:id="@+id/toss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/toss"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_toss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="Toss" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPhonetic"
+                        android:hint="Score" />
+
+                    <TextView
+                        android:id="@+id/score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/score"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPhonetic"
+                        android:hint="@string/score" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1wickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Wickets Taken" />
+
+                    <TextView
+                        android:id="@+id/wickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wicket_taken"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2wickets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Wicket taken" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1Total6s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="Total 6s" />
+
+                    <TextView
+                        android:id="@+id/total6s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_6s"
+                        android:textColor="@color/colorBlack"/>
+
+                    <EditText
+                        android:id="@+id/t2total6s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/total_6s" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1total4s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/total_4s" />
+
+                    <TextView
+                        android:id="@+id/total4s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_4s"
+                        android:textColor="@color/colorBlack"/>
+
+                    <EditText
+                        android:id="@+id/t2total4s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/total_4s" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_extras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/extras"
+                        android:inputType="number"/>
+
+                    <TextView
+                        android:id="@+id/extras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/extras"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_extras"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/extras" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_mOver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/maiden_overs" />
+
+                    <TextView
+                        android:id="@+id/t_mOver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/maiden_overs"
+                        android:textColor="@color/colorBlack"/>
+
+                    <EditText
+                        android:id="@+id/t2_mOver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/maiden_overs" />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_wideBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/wide_balls" />
+
+                    <TextView
+                        android:id="@+id/t_wideBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/wide_balls"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_wideBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/wide_balls" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_noBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/no_balls" />
+
+                    <TextView
+                        android:id="@+id/t_noBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_balls"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_noBalls"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/no_balls" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_hc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/halfCenturies" />
+
+                    <TextView
+                        android:id="@+id/t_hc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/halfCenturies"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_hc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/halfCenturies" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/centuries" />
+
+                    <TextView
+                        android:id="@+id/t_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/centuries"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_c"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/centuries" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_bU"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/bowler_used" />
+
+                    <TextView
+                        android:id="@+id/t_bu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bowler_used"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_bu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/bowler_used" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1totalcatches"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/total_catches" />
+
+                    <TextView
+                        android:id="@+id/totalcatches"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_catches"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2totalcatches"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/total_catches" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_rs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/highest_score" />
+
+                    <TextView
+                        android:id="@+id/t_rs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/run_outs_stumps"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_rs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/highest_score" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <EditText
+                        android:id="@+id/t1_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/result" />
+
+                    <TextView
+                        android:id="@+id/result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/result"
+                        android:textColor="@color/colorBlack" />
+
+                    <EditText
+                        android:id="@+id/t2_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:hint="@string/result" />
+                </TableRow>
+            </TableLayout>
+
+
+            <Button
+                android:id="@+id/saveToDatabase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save To Database"
+                android:layout_gravity="center_horizontal"
+                android:onClick="addTODatabase"/>
+
+    </LinearLayout>
+</ScrollView>
